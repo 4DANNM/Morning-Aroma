@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    height: 100px; /* Adjust the height as needed */
+    width: 100%;
+    background-color: #b87613;
+    border-radius: 3px;
+    padding: 25px;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 999; /* Ensure the header stays on top of other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.cart{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+.fa-solid{
+    color: #110c04;
+}
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: #bf6d0f;
+    color: white;
+}
+.container{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px
+}
+#root{
+    width: 73%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top:100px;
+}
+.sidebar {
+    width: 27%;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    position: fixed; /* Ensure the sidebar stays fixed */
+    top: 0; /* Position it at the top */
+    right: 0; /* Move it to the right */
+    bottom: 0; /* Extend it to the bottom */
+    overflow-y: auto; /* Add scrollbar when content overflows */
+}
+
+.head {
+    background-color: #c77b0a;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.cartItem {
+    /* Keep content within sidebar with margin-bottom */
+    margin-bottom: 20px;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+.btnCheckout {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #d12828;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+.btnCheckout:hover {
+    background-color: #9c0909;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e09c42;
+    border-radius: 5px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2{
+    font-size: 20px;
+    color: rgb(177, 93, 15);
+}
+button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: #e93131;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+button:hover{
+    background-color: #a80303;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #0f7cbf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}
+.logo1 {
+    font-size: 50px;
+    font-family: fantasy;
+    color: #743d09;
+}
+.logo2 {
+    font-size: 50px;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+
+}
+.logo3 {
+    font-size: 50px;
+    font-family: fantasy;
+    color: #ffffff;
+}
+.calculator {
+    margin-top: 10px;
+}
+
+//payment method css
+.container1{
+    width: 400px;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                0 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0 18px 36px -6px rgba(0, 0, 0, 0.1);
+}
+
+.container1 .title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px solid #333;
+    margin-top: 10px; 
+}
+.container1 .title h4 {
+    margin-top: 10px;
+}
+
+.container1 form input{
+    display: none;
+}
+
+.container1 form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.category label{
+    /* width: 100%; */
+    /* height: 65px; */
+    height: 145px;
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* label:nth-child(2), label:nth-child(3){
+    margin: 15px 0;
+} */
+
+
+#visa:checked ~ .category .visaMethod,
+#mastercard:checked ~ .category .mastercardMethod,
+#paypal:checked ~ .category .paypalMethod,
+#AMEX:checked ~ .category .amexMethod{
+    box-shadow: 0px 0px 0px 1px #6064b6;
+}
+
+
+#visa:checked ~ .category .visaMethod .check,
+#mastercard:checked ~ .category .mastercardMethod .check,
+#paypal:checked ~ .category .paypalMethod .check,
+#AMEX:checked ~ .category .amexMethod .check{
+    display: block;
+}
+
+
+label .imgName{
+    display: flex;
+    /* justify-content: space-between;
+     */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imgName span{
+    /* margin-left: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    top: 72%;
+    transform: translateY(-72%);
+}
+
+.imgName .imgContainer{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 35%;
+    transform: translateY(-35%);
+}
+
+.visa img{
+    width: 80px;
+    /* margin-left: 5px; */
+}
+
+.mastercard img{
+    width: 65px;
+}
+
+.paypal img{
+    width: 80px;
+}
+
+.AMEX img{
+    width: 50px;
+}
+
+.check{
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+.check i{
+    font-size: 18px;
+}
+/* Payment Method CSS */
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.payment-option {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #e0e0e0;
+}
+
+.payment-option img {
+    width: 100px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.payment-option label {
+    font-size: 18px;
+    color: #555;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.payment-option .checkmark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+}
+
+.payment-option input[type="radio"]:checked + label .checkmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.payment-option input[type="radio"]:checked + label .checkmark:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.payment-submit {
+    margin-top: 30px;
+}
+
+.payment-submit button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-submit button:hover {
+    background-color: #0056b3;
+}
+/* CSS for Receipt */
+.receipt {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.receipt h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.receipt div {
+    margin-bottom: 5px;
+}
+
+.receipt h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #007bff;
+}
+
